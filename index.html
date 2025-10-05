@@ -34,6 +34,7 @@
             animation: slideIn 0.8s ease-out;
             position: relative;
             z-index: 10;
+            text-align: center;
         }
 
         @keyframes slideIn {
@@ -46,6 +47,13 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+        }
+
+        .logo {
+            width: 90px;
+            height: auto;
+            margin: 25px auto 0;
+            display: block;
         }
 
         .image-container {
@@ -63,7 +71,6 @@
 
         .text-container {
             padding: 40px 30px;
-            text-align: center;
             background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
         }
 
@@ -93,6 +100,85 @@
             }
         }
 
+        .info-section {
+            margin-top: 15px;
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+            background: #f1f3f5;
+            border-radius: 20px;
+            line-height: 1.6;
+        }
+
+        .info-section a {
+            color: #4c51bf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .share-btn {
+            margin: 25px 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .share-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-wrapper {
+            background-color: #0b1a33;
+            /* dark navy blue */
+            width: 200px;
+            /* container width */
+            height: 100px;
+            /* fixed height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* crop overflowing parts */
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* crops vertically if needed */
+            display: block;
+        }
+
+
+        .arrow {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 60px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+        }
+
+        /* Floating emojis (same as before) */
         .floating-emoji {
             position: absolute;
             font-size: 50px;
@@ -121,135 +207,13 @@
             }
         }
 
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Emoji positions - desktop */
-        .emoji-1 {
-            top: 8%;
-            left: 8%;
-            animation-delay: 0s;
-        }
-
-        .emoji-2 {
-            top: 18%;
-            right: 10%;
-            animation-delay: 0.5s;
-        }
-
-        .emoji-3 {
-            bottom: 10%;
-            left: 10%;
-            animation-delay: 1s;
-        }
-
-        .emoji-4 {
-            bottom: 20%;
-            right: 10%;
-            animation-delay: 1.5s;
-        }
-
-        .emoji-5 {
-            top: 45%;
-            left: 4%;
-            animation-delay: 2s;
-        }
-
-        .emoji-6 {
-            top: 55%;
-            right: 5%;
-            animation-delay: 2.5s;
-        }
-
-        .emoji-7 {
-            top: 32%;
-            left: 15%;
-            animation: rotate 6s linear infinite;
-            animation-delay: 3s;
-        }
-
-        .emoji-8 {
-            bottom: 35%;
-            right: 12%;
-            animation-delay: 3.5s;
-        }
-
-        /* Responsive adjustments */
         @media (max-width: 600px) {
             .floating-emoji {
                 font-size: 28px;
             }
 
-            .emoji-1 {
-                top: 5%;
-                left: 5%;
-            }
-
-            .emoji-2 {
-                top: 10%;
-                right: 5%;
-            }
-
-            .emoji-3 {
-                bottom: 8%;
-                left: 5%;
-            }
-
-            .emoji-4 {
-                bottom: 15%;
-                right: 5%;
-            }
-
-            .emoji-5 {
-                top: 50%;
-                left: 3%;
-            }
-
-            .emoji-6 {
-                top: 55%;
-                right: 3%;
-            }
-
-            .emoji-7 {
-                top: 35%;
-                left: 10%;
-            }
-
-            .emoji-8 {
-                bottom: 30%;
-                right: 8%;
-            }
-
             .text-container {
                 padding: 30px 20px;
-            }
-        }
-
-        .arrow {
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 60px;
-            animation: bounce 1s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            50% {
-                transform: translateX(-50%) translateY(-15px);
             }
         }
     </style>
@@ -257,17 +221,22 @@
 
 <body>
     <!-- Floating Emojis -->
-    <div class="floating-emoji emoji-1">😂</div>
-    <div class="floating-emoji emoji-2">🤣</div>
-    <div class="floating-emoji emoji-3">👉</div>
-    <div class="floating-emoji emoji-4">👈</div>
-    <div class="floating-emoji emoji-5">😏</div>
-    <div class="floating-emoji emoji-6">🤦‍♂️</div>
-    <div class="floating-emoji emoji-7">👀</div>
-    <div class="floating-emoji emoji-8">😆</div>
+    <div class="floating-emoji" style="top:8%; left:8%;">😂</div>
+    <div class="floating-emoji" style="top:18%; right:10%;">🤣</div>
+    <div class="floating-emoji" style="bottom:10%; left:10%;">👉</div>
+    <div class="floating-emoji" style="bottom:20%; right:10%;">👈</div>
+    <div class="floating-emoji" style="top:45%; left:4%;">😏</div>
+    <div class="floating-emoji" style="top:55%; right:5%;">🤦‍♂️</div>
+    <div class="floating-emoji" style="top:32%; left:15%;">👀</div>
+    <div class="floating-emoji" style="bottom:35%; right:12%;">😆</div>
 
     <!-- Main Card -->
     <div class="container">
+
+        <div class="logo-wrapper">
+            <img src="/img/EB-Logo-Full.png" alt="Logo" class="logo">
+        </div>
+
         <div class="image-container">
             <img src="/img/mock_img.png" alt="Mocking gesture">
         </div>
@@ -280,8 +249,40 @@
                 നോക്കി <span class="highlight">CLICK</span> ചെയ്യണ്ടേ.
             </p>
         </div>
-    </div>
-</body>
 
+        <div class="info-section">
+            കൂടുതല്‍ അറിയാന്‍ താഴെ മലയാളത്തില്‍ കാണുന്ന ലിങ്ക് ക്ലിക്ക് ചെയ്യാം.<br><br>
+            <a href="#" id="infoLink">👉 വിശദാംശങ്ങള്‍ കാണാന്‍ ഇവിടെ ക്ലിക്ക് ചെയ്യൂ</a>
+        </div>
+
+        <script>
+            const infoLink = document.getElementById('infoLink');
+            infoLink.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                infoLink.innerHTML = "മോനെ നിന്നോടല്ലേ link click ചെയ്യല്ലേ പറഞ്ഞെ";
+                infoLink.style.fontSize = "24px";
+                infoLink.style.fontWeight = "900";
+                infoLink.style.color = "#e53e3e";
+            });
+        </script>
+
+
+        <button class="share-btn" onclick="sharePage()">📢 Share to your friends</button>
+    </div>
+
+    <script>
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'എന്താ മോനെ...',
+                    text: 'നോക്കണേ മോനെ',
+                    url: window.location.href
+                });
+            } else {
+                alert('Sharing not supported in this browser.');
+            }
+        }
+    </script>
+</body>
 
 </html>
