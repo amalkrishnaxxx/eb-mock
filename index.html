@@ -26,8 +26,8 @@
 
         .container {
             max-width: 600px;
-            width: 90%;
-            background: rgba(255, 255, 255, 0.95);
+            width: 75%;
+            background: #01091d;
             border-radius: 30px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
@@ -50,7 +50,7 @@
         }
 
         .logo {
-            width: 90px;
+            width: 100px;
             height: auto;
             margin: 25px auto 0;
             display: block;
@@ -71,20 +71,20 @@
 
         .text-container {
             padding: 40px 30px;
-            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+            background: linear-gradient(180deg, #01091D 0%, #01091D 100%);
         }
 
         .main-text {
             font-size: clamp(24px, 5vw, 36px);
             font-weight: 800;
-            color: #2d3748;
+            color: #eeff00;
             line-height: 1.4;
             animation: pulse 2s ease-in-out infinite;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .highlight {
-            color: #e53e3e;
+            color: #fc0202;
             font-weight: 900;
         }
 
@@ -104,14 +104,14 @@
             margin-top: 15px;
             padding: 20px;
             font-size: 16px;
-            color: #333;
-            background: #f1f3f5;
+            color: #ffffff;
+            background: #01091d;
             border-radius: 20px;
             line-height: 1.6;
         }
 
         .info-section a {
-            color: #4c51bf;
+            color: #9c9cfd;
             text-decoration: none;
             font-weight: bold;
         }
@@ -119,7 +119,7 @@
         .share-btn {
             margin: 25px 0;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
+            color: #ffffff;
             border: none;
             padding: 12px 25px;
             border-radius: 25px;
@@ -133,11 +133,11 @@
         }
 
         .logo-wrapper {
-            background-color: #0b1a33;
+            background-color: ;
             /* dark navy blue */
-            width: 200px;
+            width: 100%;
             /* container width */
-            height: 100px;
+            height: 120px;
             /* fixed height */
             display: flex;
             justify-content: center;
@@ -251,18 +251,18 @@
         </div>
 
         <div class="info-section">
-            കൂടുതല്‍ അറിയാന്‍ താഴെ മലയാളത്തില്‍ കാണുന്ന ലിങ്ക് ക്ലിക്ക് ചെയ്യാം.<br><br>
-            <a href="#" id="infoLink">👉 വിശദാംശങ്ങള്‍ കാണാന്‍ ഇവിടെ ക്ലിക്ക് ചെയ്യൂ</a>
+            കാണുന്ന Link എല്ലാം click ചെയ്താൽ നിങ്ങളുടേ ഫോൺ Hack ചെയ്യപ്പെടാൻ സാധ്യധ ഉണ്ട്. ഇന്നുമുതൽ കാണുന്ന എല്ലാ ലിങ്കിലും Click ചെയ്യില്ല എന്ന് നമ്മൾ തീരുമാനിക്കുക   .<br><br>
+            <a href="#" id="infoLink">👉 കൂടുതല്‍ അറിയാന്‍ ഇവിടെ ക്ലിക്ക് ചെയ്യൂ</a>
         </div>
 
         <script>
             const infoLink = document.getElementById('infoLink');
             infoLink.addEventListener('click', function (e) {
                 e.preventDefault(); // Prevent default link behavior
-                infoLink.innerHTML = "മോനെ നിന്നോടല്ലേ link click ചെയ്യല്ലേ പറഞ്ഞെ";
+                infoLink.innerHTML = "മോനെ നിന്നോടല്ലേ കാണുന്ന Link എല്ലാം click ചെയ്യല്ലേ എന്ന് പറഞ്ഞേ";
                 infoLink.style.fontSize = "24px";
                 infoLink.style.fontWeight = "900";
-                infoLink.style.color = "#e53e3e";
+                infoLink.style.color = "#fc0202";
             });
         </script>
 
