@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/img/EB-Logo-Full.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>എന്താ മോനെ...</title>
+    <title>Amazon Offer</title>
     <style>
         * {
             margin: 0;
@@ -229,7 +230,7 @@
     <div class="floating-emoji" style="top:55%; right:5%;">🤦‍♂️</div>
     <div class="floating-emoji" style="top:32%; left:15%;">👀</div>
     <div class="floating-emoji" style="bottom:35%; right:12%;">😆</div>
-
+    <audio id="bgMusic" src="Audio/bg.mp3" loop></audio>
     <!-- Main Card -->
     <div class="container">
 
@@ -274,8 +275,8 @@
         function sharePage() {
             if (navigator.share) {
                 navigator.share({
-                    title: 'എന്താ മോനെ...',
-                    text: 'നോക്കണേ മോനെ',
+                    title: 'Amazon Offer',
+                    text: 'Iphone at Best Price',
                     url: window.location.href
                 });
             } else {
@@ -283,7 +284,14 @@
             }
         }
     </script>
+    <script>
+    document.body.addEventListener('click', function() {
+    const music = document.getElementById('bgMusic');
+    if (music.paused) {
+      music.play();
+    }
+  }, { once: true });
+</script>
 </body>
 
 </html>
-
